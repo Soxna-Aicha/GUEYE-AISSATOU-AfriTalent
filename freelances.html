@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Freelances - AfriTalent</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -13,7 +14,299 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                       <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                       <li class="nav-item"><a class="nav-link active" aria-current="page" href="freelances.html">Freelances</a></li>
+                       <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                       <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                       <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                
 
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <!--Partie barre de filtres-->
+
+    <section class="section-filtres">
+        <div class="container">
+            <h2 class="titre-page">Nos Experts Freelances</h2>
+            <div class="barre-filtre">
+                <button class="btn-filtre active" data-category="all">Tous</button>
+                <button class="btn-filtre" data-category="web">Développement Web</button>
+                <button class="btn-filtre" data-category="design">Design UI/UX</button>
+                <button class="btn-filtre" data-category="Marketing">Marketing Digital</button>
+
+            </div>
+        </div>
+    </section>
+    <!-- Partie grille de profils -->
+    <main>
+        <section class="section-catalogue">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Blocs Web (3 profils) -->
+
+                    <!-- carte 1-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="web">
+                        <div class="img-container">
+                            <img src="images/Aicha Diallo.jpg" alt="Aicha Diallo">
+                            <span class="prix-badge">50€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Aicha Diallo</h3>
+                            <p class="function">Full Stack Development</p>
+                            <p class="description">Experte en création de sites sécurisés et performants.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </div>
+                            
+                        </div>
+                        
+                    </article>
+
+                    <!-- carte 2-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="web">
+                        <div class="img-container">
+                            <img src="images/Mouhamed Fall.jpg" alt="Mouhamed Fall">
+                            <span class="prix-badge">45€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Mouhamed Fall</h3>
+                            <p class="function">Front-End Development</p>
+                            <p class="description">Spécialisé en interfaces modernes et interactives avec HTML, CSS et JavaScript. Crée des expériences utilisateur fluides et responsive.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                        
+                    </article>
+
+                    <!-- carte 3-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="web">
+                        <div class="img-container">
+                            <img src="images/Zeynab Diagne.jpg" alt="Zeynab Diagne">
+                            <span class="prix-badge">60€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Zeynab Diagne</h3>
+                            <p class="function">Back-End Development</p>
+                            <p class="description">Expert en gestion de bases de données et développement de serveurs sécurisés. Maîtrise Node.js et les API REST.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                       
+                    </article>
+
+                    <!-- Blocs Design (3 profils) -->
+
+                    <!-- carte 1-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="design">
+                        <div class="img-container">
+                            <img src="images/Kader Toure.jpg" alt="Abdel Kader Toure">
+                            <span class="prix-badge">55€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Abdel Kader Toure</h3>
+                            <p class="function">UI/UX Redesign</p>
+                            <p class="description">Améliore l’apparence et l’ergonomie des sites existants pour offrir une expérience utilisateur moderne et intuitive.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                        
+                    </article>
+
+                    <!-- carte 2-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="design">
+                        <div class="img-container">
+                            <img src="images/Ababacar Gaye.jpg" alt="Ababacar Gaye">
+                            <span class="prix-badge">65€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Ababacar Gaye</h3>
+                            <p class="function">Website Revamp</p>
+                            <p class="description">Analyse et transforme les anciens sites en plateformes modernes, rapides et adaptées aux standards actuels.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                        
+                    </article>
+
+                    <!-- carte 3-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="design">
+                        <div class="img-container">
+                            <img src="images/mariam fall.jpg" alt="Sokhna Mariam Fall">
+                            <span class="prix-badge">50€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Sokhna Mariam Fall</h3>
+                            <p class="function">Design Optimization</p>
+                            <p class="description">Optimise le design et les performances visuelles pour rendre les interfaces plus attractives et professionnelles.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                        
+                    </article>
+
+                    <!-- Blocs Marketing (3 profils) -->
+
+                    <!-- carte 1-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="Marketing">
+                        <div class="img-container">
+                            <img src="images/rama sow.jpg" alt="Ramatoulaye Sow">
+                            <span class="prix-badge">40€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Ramatoulaye Sow</h3>
+                            <p class="function">Social Media Manager</p>
+                            <p class="description">Gère et développe la présence des marques sur les réseaux sociaux avec des stratégies efficaces pour augmenter l’engagement.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            
+                        </div>
+                        
+                    </article>
+                    <!-- carte 2-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="Marketing">
+                        <div class="img-container">
+                            <img src="images/mareme gueye.jpg" alt="Soda Marème Gueye">
+                            <span class="prix-badge">55€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>Soda Marème Gueye</h3>
+                            <p class="function">SEO Specialis</p>
+                            <p class="description">Optimise les sites web pour améliorer leur position sur les moteurs de recherche et attirer plus de trafic organique.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        
+                    </article>
+
+                    <!-- carte 3-->
+                    <article class="carte-freelance col-12 col-md-6 col-lg-4" data-category="Marketing">
+                        <div class="img-container">
+                            <img src="images/el malick.jpg" alt="El Malick Mbaye">
+                            <span class="prix-badge">65€</span>
+                        </div>
+                        <div class="body-carte">
+                            <h3>El Malick Mbaye</h3>
+                            <p class="function">Digital Marketing Expert</p>
+                            <p class="description">Met en place des stratégies marketing complètes pour booster la visibilité et les ventes en ligne.</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn-profil">Voir le profil</a>
+                            <a href="#" class="btn-contact">Contacter</a>
+                            
+                            <div class="contacts-hidden">
+                            <a href="#"><i class="bi bi-telephone"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        
+                    </article>
+
+
+                    
+                    
+                    
+               
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    
+    
     
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
