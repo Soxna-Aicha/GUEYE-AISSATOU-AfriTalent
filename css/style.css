@@ -1,0 +1,114 @@
+/* ==========================================================================
+   1. IMPORTATIONS & VARIABLES GLOBAL (Google Fonts & :root)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap');
+
+:root {
+    /* Palette de couleurs (Cohérente & orientée Tech/Sécurité) */
+    --color-primary: #2563eb;       /* Bleu Tech principal */
+    --color-primary-dark: #1d4ed8;  /* Bleu foncé pour les survols (hover) */
+    --color-secondary: #0f172a;    /* Bleu nuit / Noir pour les titres et le mode sombre */
+    --color-accent: #dc2626;       /* Rouge Alerte/Sécurité (parfait pour tes clins d'œil !) */
+    --color-bg-light: #f8fafc;     /* Fond de page ultra-clair */
+    --color-muted: #64748b;        /* Gris pour les textes secondaires / descriptions */
+
+    /* Typographies (Exigence des 2 Google Fonts) */
+    --font-titles: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Espacements standardisés */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 2rem;     /* 32px */
+    --space-lg: 4rem;     /* 64px */
+    
+    /* Transitions fluides pour les boutons et liens */
+    --transition-smooth: all 0.3s ease;
+}
+/* ==========================================================================
+   2. RESET CSS & STYLES DE BASE
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-light);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    overflow-x: hidden;   
+}
+img {
+        max-width: 100%;
+        display: block;
+    }
+    ul {
+        list-style: none;
+    }
+    section {
+        padding: var(--space-lg) 0;
+    }
+/* Application de la police des titres globalement */
+h1, h2, h3, h4, h5, h6, .display-4, .navbar-brand {
+    font-family: var(--font-titles);
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   3. LAYOUT GÉNÉRAL : NAVBAR STYLISÉE
+   ========================================================================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px); /* Petit effet de flou moderne derrière la barre */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: var(--space-sm) 0;
+}
+
+/* Le logo "AfriTalent" */
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    color: var(--color-secondary) !important;
+}
+
+/* Les liens du menu de navigation */
+.navbar-nav .nav-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--color-muted) !important;
+    padding: var(--space-xs) var(--space-sm) !important;
+    position: relative;
+}
+
+/* Effet au survol (Hover) sur les liens */
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Le lien de la page actuelle (Active) */
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+    font-weight: 600;
+}
+
+/*Une petite ligne animée sous le lien actif */
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--space-sm);
+    right: var(--space-sm);
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
