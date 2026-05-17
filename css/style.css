@@ -111,4 +111,336 @@ a {
     background-color: var(--color-primary);
     border-radius: 2px;
 }
+/*==============================================================================================
+         COMMIT 4
+================================================================================================*/   
+/* ==========================================================================
+   4. COMPOSANTS SPÉCIFIQUES (Commit 4)
+   Hero • Bento Grid • Services • Témoignages • Cards • Buttons
+   ========================================================================== */
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding-top: 9rem; /* Un peu d'espace pour ne pas coller à la navbar fixe */
+    padding-bottom: 4rem;
+    background: linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #e2e8f0 100%
+    );
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Ajusté pour éviter que ce soit trop géant sur petits écrans */
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    font-weight: 800;
+}
+
+/* Si tu utilises un span pour colorer un mot clé */
+.hero-content h1 span {
+    color: var(--color-primary);
+}
+
+.hero-content h2 {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+    object-fit: cover;
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+/* Liaison avec tes classes HTML personnalisées pour les boutons du Hero */
+.freelance-cta, .client-cta {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.freelance-cta {
+    background-color: var(--color-primary);
+    color: #ffffff !important;
+}
+
+.freelance-cta:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.client-cta {
+    background-color: transparent;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary);
+}
+
+.client-cta:hover {
+    background-color: var(--color-primary);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   STATISTIQUES HERO
+   ========================================================================== */
+.stat-hero {
+    margin-top: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    background: #ffffff;
+    padding: var(--space-md);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.counter {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-family: var(--font-titles);
+}
+
+.stat-item p {
+    margin-bottom: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   BENTO GRID — COMMENT ÇA MARCHE
+   ========================================================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+/* Ciblage précis des cartes du bento */
+.bento-item {
+    background: #ffffff;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.bento-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* Gestion de l'asymétrie Bento */
+.etape1 {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); /* Petit effet dégradé discret pour la grande carte */
+}
+
+.etape4 {
+    grid-column: span 2;
+}
+
+.bento-item i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.bento-item h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+/* Correction de la classe pour correspondre au HTML (<span class="etape-numero">) */
+.etape-numero {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   SERVICES / CATEGORIES
+   ========================================================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.category-card {
+    background-color: #ffffff;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: var(--transition-smooth);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(37,99,235,0.12);
+    border-color: rgba(37,99,235,0.3);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--space-sm) auto;
+    border-radius: 50%;
+    background: rgba(37,99,235,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.category-card:hover .icon-box {
+    background: var(--color-primary);
+}
+
+.category-card:hover .icon-box i {
+    color: #ffffff;
+}
+
+.icon-box i {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    transition: var(--transition-smooth);
+}
+
+.category-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.freelance-count {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   TÉMOIGNAGES / CAROUSEL
+   ========================================================================== */
+.testimonials-section {
+    background-color: #ffffff;
+    padding: var(--space-lg) 0;
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg) auto;
+    background-color: #f8fafc; /* Remplacé par une couleur web standard si ta variable n'est pas encore lue */
+    padding: var(--space-lg);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto var(--space-sm) auto;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stars {
+    color: #fbbf24;
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #475569;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.testimonial-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   CARTES GENERIQUES (Cards) & BOUTONS STANDARD BOOTSTRAP
+   ========================================================================== */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08) !important;
+}
+
+.btn {
+    font-family: var(--font-body);
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}      
+
 
