@@ -623,5 +623,858 @@ footer a:hover {
     .card-title {
         font-size: 1.1rem;
     }
-}    
+}
+/* ==========================================================================
+                  COMMIT 6
+   ========================================================================== */
 
+/* ==========================================================================
+   TRANSITIONS GLOBALES
+   ========================================================================== */
+body,
+section,
+.card,
+.category-card,
+.bento-grid > div,
+.testimonial-card,
+.stat-hero,
+.navbar,
+footer,
+.carte-freelance,
+.carte-blog,
+.carte-tarif,
+.carte-tarif-plus-visible {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.3s ease;
+}
+
+/* ==========================================================================
+   NAVBAR DYNAMIQUE AU SCROLL
+   ========================================================================== */
+.navbar {
+    backdrop-filter: blur(14px);
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    padding: 0.45rem 0 !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   SECTION FILTRES
+   ========================================================================== */
+.section-filtres .barre-filtre {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+}
+
+.section-filtres .btn-filtre,
+.section-catalogue button {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+
+    padding: 0.6rem 1.4rem;
+
+    background-color: #f1f5f9;
+    color: var(--color-secondary);
+
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.section-filtres .btn-filtre:hover,
+.section-filtres .btn-filtre.active,
+.section-catalogue button:hover,
+.section-catalogue button.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* ==========================================================================
+   SECTION "COMMENT ÇA MARCHE" — BENTO GRID
+   ========================================================================== */
+.function-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.bento-grid > div[class^="etape"] {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+    padding: 25px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.bento-grid > div[class^="etape"]:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bento-grid > div[class^="etape"] i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.bento-grid .etape.numero {
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bento-grid > div[class^="etape"] h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: #1e293b;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.bento-grid > div[class^="etape"] p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+
+    color: #64748b;
+
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   CARTES FREELANCES
+   ========================================================================== */
+.carte-freelance {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: var(--space-sm);
+
+    transition: transform 0.3s ease;
+}
+
+.carte-freelance:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.carte-freelance .img-container {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 16px 16px 0 0;
+}
+
+.carte-freelance .img-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.carte-freelance:hover .img-container img {
+    transform: scale(1.04);
+}
+
+/* BADGE PRIX */
+.carte-freelance .prix-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    padding: 0.4rem 0.9rem;
+
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(4px);
+
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* BODY */
+.carte-freelance .body-carte {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: var(--space-md);
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-top: none;
+
+    border-radius: 0 0 16px 16px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    transition: var(--transition-smooth);
+}
+
+.carte-freelance:hover .body-carte {
+    border-color: var(--color-primary);
+
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.carte-freelance .body-carte h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: var(--color-secondary);
+
+    margin-bottom: 0.25rem;
+}
+
+.carte-freelance .function {
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    color: var(--color-primary);
+
+    margin-bottom: var(--space-xs);
+}
+
+.carte-freelance .description {
+    flex-grow: 1;
+
+    font-size: 0.92rem;
+    line-height: 1.5;
+
+    color: var(--color-muted);
+
+    margin-bottom: var(--space-sm);
+}
+
+.carte-freelance .stars {
+    color: #ffb703;
+
+    margin-bottom: var(--space-md);
+
+    font-size: 0.9rem;
+}
+
+/* BOUTONS */
+.carte-freelance .btn-profil,
+.carte-freelance .btn-contact {
+    display: inline-block;
+
+    padding: 0.5rem 1rem;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: var(--transition-smooth);
+
+    margin-bottom: var(--space-xs);
+}
+
+.carte-freelance .btn-profil {
+    background-color: var(--color-primary);
+    color: #ffffff !important;
+}
+
+.carte-freelance .btn-profil:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.carte-freelance .btn-contact {
+    background-color: transparent;
+
+    color: var(--color-primary) !important;
+
+    border: 1px solid var(--color-primary);
+}
+
+.carte-freelance .btn-contact:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* CONTACTS */
+.carte-freelance .contacts-hidden {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: var(--space-xs);
+    padding-top: var(--space-xs);
+
+    border-top: 1px solid #f1f5f9;
+}
+
+.carte-freelance .contacts-hidden a {
+    color: var(--color-muted);
+
+    font-size: 1.1rem;
+
+    transition: var(--transition-smooth);
+}
+
+.carte-freelance .contacts-hidden a:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   SECTION TARIFS
+   ========================================================================== */
+.section-tarifs {
+    padding-top: 80px !important;
+}
+
+.carte-tarif,
+.carte-tarif-plus-visible {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+
+    padding: var(--space-md);
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.carte-tarif:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.carte-tarif-plus-visible {
+    border: 2px solid var(--color-primary);
+
+    transform: scale(1.02);
+
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.carte-tarif-plus-visible:hover {
+    transform: scale(1.02) translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+}
+
+/* HEADER */
+.tarif-header {
+    text-align: center;
+
+    margin-bottom: var(--space-md);
+}
+
+.tarif-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: var(--color-secondary);
+
+    margin-bottom: 0.5rem;
+}
+
+.tarif-header .prix {
+    font-size: 2.2rem;
+    font-weight: 800;
+
+    color: var(--color-secondary);
+}
+
+.tarif-header .prix span {
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    color: var(--color-muted);
+}
+
+/* BADGE */
+.tarif-header .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 20px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* DETAILS */
+.tarif-detail {
+    flex-grow: 1;
+
+    margin-bottom: var(--space-md);
+}
+
+.tarif-detail .proposition {
+    list-style: none;
+
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tarif-detail .proposition li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 0.95rem;
+
+    color: var(--color-secondary);
+
+    margin-bottom: 0.75rem;
+}
+
+.tarif-detail .proposition li i.bi-check-circle-fill {
+    color: #10b981;
+}
+
+.tarif-detail .proposition li.non-disponible {
+    opacity: 0.6;
+
+    color: var(--color-muted);
+}
+
+.tarif-detail .proposition li.non-disponible i {
+    color: #ef4444;
+}
+
+/* FOOTER */
+.tarif-footer {
+    text-align: center;
+}
+
+.btn-choisir,
+.btn-choisir-principal {
+    width: 100%;
+
+    padding: 0.7rem 1.5rem;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition-smooth);
+}
+
+.btn-choisir {
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    border: 2px solid var(--color-primary);
+}
+
+.btn-choisir:hover {
+    background-color: var(--color-primary);
+
+    color: #ffffff !important;
+}
+
+.btn-choisir-principal {
+    background-color: var(--color-primary);
+
+    color: #ffffff;
+
+    border: 2px solid var(--color-primary);
+}
+
+.btn-choisir-principal:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+/* ==========================================================================
+   FAQ / ACCORDION
+   ========================================================================== */
+.accordion-item {
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px !important;
+
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #ffffff;
+
+    color: #1e293b;
+
+    font-weight: 600;
+
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #eff6ff;
+
+    color: var(--color-primary);
+}
+
+.accordion-body {
+    background-color: #ffffff;
+
+    color: #475569;
+}
+
+/* ==========================================================================
+   DARK MODE GLOBAL
+   ========================================================================== */
+body.dark-mode {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode .hero-section,
+body.dark-mode .services-section,
+body.dark-mode .function-section,
+body.dark-mode .testimonials-section,
+body.dark-mode .cta-section,
+body.dark-mode .section-tarifs,
+body.dark-mode .section-faq {
+    background-color: #020617 !important;
+}
+
+/* NAVBAR */
+body.dark-mode .navbar {
+    background-color: rgba(15, 23, 42, 0.92) !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar.navbar-scrolled {
+    background-color: rgba(15, 23, 42, 0.98) !important;
+}
+
+body.dark-mode .navbar-brand {
+    color: #ffffff !important;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link.active {
+    color: #60a5fa !important;
+}
+
+/* CARDS */
+body.dark-mode .card,
+body.dark-mode .category-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .bento-grid > div,
+body.dark-mode .stat-hero,
+body.dark-mode .carte-freelance,
+body.dark-mode .carte-blog,
+body.dark-mode .carte-tarif,
+body.dark-mode .carte-tarif-plus-visible,
+body.dark-mode .accordion-item {
+    background-color: #0f172a !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    color: #f8fafc !important;
+}
+
+/* TEXTES */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .counter,
+body.dark-mode .card-title,
+body.dark-mode .tarif-header h3,
+body.dark-mode .tarif-header .prix {
+    color: #ffffff !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode .testimonial-text,
+body.dark-mode .freelance-count,
+body.dark-mode .card-text,
+body.dark-mode .accordion-body {
+    color: #94a3b8 !important;
+}
+
+/* BOUTONS SOMBRES */
+body.dark-mode .section-filtres .btn-filtre,
+body.dark-mode .section-catalogue button {
+    background-color: #0f172a;
+
+    color: #cbd5e1;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .section-filtres .btn-filtre:hover,
+body.dark-mode .section-filtres .btn-filtre.active,
+body.dark-mode .section-catalogue button:hover,
+body.dark-mode .section-catalogue button.active {
+    background-color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    color: #ffffff !important;
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* BOUTONS CARTES */
+body.dark-mode .carte-freelance .btn-contact,
+body.dark-mode .btn-choisir {
+    background-color: transparent;
+
+    color: #60a5fa !important;
+
+    border: 1px solid #60a5fa;
+}
+
+body.dark-mode .carte-freelance .btn-contact:hover,
+body.dark-mode .btn-choisir:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+
+    color: #ffffff !important;
+
+    border-color: #ffffff;
+}
+
+body.dark-mode .btn-choisir-principal {
+    background-color: #2563eb !important;
+
+    border-color: #2563eb !important;
+
+    color: #ffffff !important;
+}
+
+body.dark-mode .btn-choisir-principal:hover {
+    background-color: #1d4ed8 !important;
+
+    border-color: #1d4ed8 !important;
+}
+
+/* FAQ */
+body.dark-mode .accordion-button {
+    background-color: #0f172a !important;
+
+    color: #ffffff !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background-color: rgba(37, 99, 235, 0.15) !important;
+
+    color: #60a5fa !important;
+}
+
+body.dark-mode .accordion-body {
+    background-color: #0f172a !important;
+
+    color: #cbd5e1 !important;
+}
+
+/* ==========================================================================
+   BOUTON RETOUR EN HAUT
+   ========================================================================== */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    transform: translateY(-4px);
+
+    background-color: var(--color-primary-dark);
+
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+/* ==========================================================================
+   HERO SECTION - VISIBILITÉ TEXTE MODE SOMBRE
+   ========================================================================== */
+
+body.dark-mode .hero-section {
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.18),
+            transparent 40%
+        ),
+        #020617 !important;
+}
+
+/* Titre principal */
+body.dark-mode .hero-section h1,
+body.dark-mode .hero-section .hero-title {
+    color: #ffffff !important;
+}
+
+/* Texte secondaire */
+body.dark-mode .hero-section p,
+body.dark-mode .hero-section .hero-content p,
+body.dark-mode .hero-section .hero-subtitle {
+    color: #cbd5e1 !important;
+}
+
+/* Boutons de la Hero */
+body.dark-mode .hero-section .btn,
+body.dark-mode .hero-section .btn-primary,
+body.dark-mode .hero-section .btn-outline-primary {
+    opacity: 1 !important;
+}
+
+/* Image Hero légèrement plus visible */
+body.dark-mode .hero-section img {
+    opacity: 1 !important;
+}
+
+/* =========================
+   SECTION TARIFS
+   ========================= */
+
+/* Cartes */
+body.dark-mode .carte-tarif,
+body.dark-mode .carte-tarif-plus-visible {
+    background-color: #0f172a !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Titres */
+body.dark-mode .carte-tarif h3,
+body.dark-mode .tarif-header h3,
+body.dark-mode .tarif-header .prix {
+    color: #ffffff !important;
+}
+
+/* Texte secondaire */
+body.dark-mode .tarif-header .prix span,
+body.dark-mode .tarif-detail li,
+body.dark-mode .tarif-detail p {
+    color: #cbd5e1 !important;
+}
+
+/* Options non disponibles */
+body.dark-mode .tarif-detail .non-disponible {
+    color: #64748b !important;
+}
+
+/* Boutons */
+body.dark-mode .btn-choisir {
+    color: #60a5fa !important;
+    border-color: #60a5fa !important;
+}
+
+body.dark-mode .btn-choisir:hover {
+    background-color: #60a5fa !important;
+    color: #0f172a !important;
+}
+
+body.dark-mode .btn-choisir-principal {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+}
