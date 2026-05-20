@@ -120,4 +120,83 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    /* =======================================================================
+            COMMIT 7
+       ======================================================================= */            
+    /* ======================================================================
+       4. COMPTEURS ANIMÉS
+       ====================================================================== */
+
+    const counters = document.querySelectorAll(".counter");
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting) {
+
+                const counter = entry.target;
+
+                const target = +counter.getAttribute("data-target");
+
+                let current = 0;
+
+                const increment = target / 100;
+
+                const updateCounter = () => {
+
+                    current += increment;
+
+                    if(current < target) {
+
+                        counter.textContent = Math.ceil(current);
+
+                        requestAnimationFrame(updateCounter);
+
+                    } else {
+
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+
+                observer.unobserve(counter);
+            }
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
+
+
+    /* ======================================================================
+       5. ANIMATIONS FADE-IN
+       ====================================================================== */
+
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+            }
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    fadeElements.forEach(element => {
+        fadeObserver.observe(element);
+    });
+
 });
