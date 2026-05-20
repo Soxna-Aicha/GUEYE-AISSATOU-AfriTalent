@@ -198,5 +198,121 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach(element => {
         fadeObserver.observe(element);
     });
+    
+    /* ======================================================================
+    COMMIT8: 6. FILTRAGE DES FREELANCES (SANS RECHARGEMENT)
+    ====================================================================== */
+    const filterButtons = document.querySelectorAll(".btn-filtre");
+    const freelanceCards = document.querySelectorAll(".carte-freelance");
 
-});
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Retire la classe active de tous les boutons
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            // Ajoute active au bouton cliqué
+            button.classList.add("active");
+
+            //catégorie choisie
+            const category = button.dataset.category;
+
+            // On filtre les cartes
+            freelanceCards.forEach(card => {
+
+                if (category === "all" || card.dataset.category === category) {
+                    card.style.display = "";
+                
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+
+    /* ======================================================================
+    7. VALIDATION COMPLETE DU FORMULAIRE DE CONTACT
+    ====================================================================== */
+    const contactForm = document.getElementById("contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Récupération des champs
+            const nom = document.getElementById("nom");
+            const prenom = document.getElementById("prenom");
+            const email = document.getElementById("email");
+            const sujet = document.getElementById("sujet");
+            const message = document.getElementById("message");
+
+            // Récupération des zones d'erreurs
+            const errorNom = document.getElementById("error-nom");
+            const errorPrenom = document.getElementById("error-prenom");
+            const errorEmail = document.getElementById("error-email");
+            const errorSujet = document.getElementById("error-sujet");
+            const errorMessage = document.getElementById("error-message");
+
+            // Message de succès
+            const successMessage = document.getElementById("success-message");
+
+            // Reset des messages d'erreur et masquage initial du succès
+            errorNom.textContent = "";
+            errorPrenom.textContent = "";
+            errorEmail.textContent = "";
+            errorSujet.textContent = "";
+            errorMessage.textContent = "";
+            if (successMessage) successMessage.classList.add("d-none");
+
+            // Variable témoin de validation
+            let isValid = true;
+
+            // Validation du nom
+            if (nom.value.trim() === "") {
+                errorNom.textContent = "Le nom est obligatoire.";
+                isValid = false;
+            }
+
+            // Validation du prénom
+            if (prenom.value.trim() === "") {
+                errorPrenom.textContent = "Le prénom est obligatoire.";
+                isValid = false;
+            }
+
+            // Validation de l'email avec Regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === "") {
+                errorEmail.textContent = "L'email est obligatoire.";
+                isValid = false;
+            } else if (!emailRegex.test(email.value.trim())) {
+                errorEmail.textContent = "Format email invalide (ex: exemple@domaine.com).";
+                isValid = false;
+            }
+
+            // Validation du sujet sélectionné
+            if (!sujet || sujet.value === "") {
+                errorSujet.textContent = "Veuillez choisir un sujet.";
+                isValid = false;
+            }
+
+            // Validation de la longueur du message
+            if (message.value.trim() === "") {
+                errorMessage.textContent = "Le message est obligatoire.";
+                isValid = false;
+            } else if (message.value.trim().length < 20) {
+                errorMessage.textContent = "Votre message doit contenir au moins 20 caractères.";
+                isValid = false;
+            }
+
+            // Si tout le formulaire est valide
+            if (isValid) {
+                if (successMessage) {
+                    successMessage.classList.remove("d-none");
+                }
+                contactForm.reset(); // Vide tous les champs
+            }
+        });
+    }
+});   
