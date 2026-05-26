@@ -14,15 +14,16 @@
 </head>
 
 <body>
+    <!-- ==================================== HEADER/NAVBAR ============================================ -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+                <a class="navbar-brand" href="index.html">AfriTalent</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> 
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Accueil</a></li>
                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
                        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
@@ -33,7 +34,7 @@
 
                     </ul>
                     <div class="form-check form-switch ms-3">
-                        <input class="form-check-input" type="checkbox" id="theme-toggle">
+                        <input class="form-check-input" type="checkbox" id="theme-toggle" >
                         <label class="form-check-label text-muted" for="theme-toggle">🌙</label>
                     </div>
                 </div>
@@ -42,10 +43,12 @@
         </nav>
     </header>
     <main>
+        <!-- ======================================= SECTION: HERO ============================================= -->         
+            
         <section class="hero-section fade-in">
             <div class="container">
                 <div class="hero-layout">
-                    <div class="hero-content fade-delay-1">
+                    <div class="hero-content fade-in fade-delay-1">
                         <h1>Propulsez vos projets avec AfriTalent</h1>
                         <h2>Recrutez les meilleurs freelances pour transformer vos ambitions numériques en réalité.</h2>
                         <div class="hero-cta">
@@ -53,12 +56,12 @@
                             <a href="freelances.html" class="client-cta">Je cherche un Freelance</a>
                         </div>
                     </div>
-                    <div class="hero-image fade-delay-2">
+                    <div class="hero-image fade-in fade-delay-2">
                         <img src="images/hero.jpg" alt="image illustrant">
                     </div>
                     
                 </div>
-                <div class="stat-hero fade-delay-3">
+                <div class="stat-hero fade-in fade-delay-3">
                         
                         <div class="stat-item">
                             <span class="counter" data-target="2500">0</span>
@@ -75,6 +78,7 @@
                     </div>
             </div>
         </section>
+        <!-- ===================================== SECTION: COMMENT ÇA MARCHE ========================================== -->
         <section id="function" class="function-section fade-in">
             <div class="container">
                 <header class="header-section">
@@ -82,28 +86,29 @@
                     <p>Lancez-vous sur AfriTalent en 4 étapes simples.</p>
                 </header>
                 <div class="bento-grid fade-in fade-delay-1">
-                    <div class="etape1">
-                        <i class="bi bi-person-plus-fill"></i><span class="etape numero">Etape:01</span>
+                    <div class=" bento-item etape1">
+                        <i class="bi bi-person-plus-fill"></i><span class="etape-numero">Etape:01</span>
                         <h3>Créez votre profil</h3>
                         <p>Inscrivez-vous gratuitement et mettez en avant vos compétences.</p>
                     </div>
-                    <div class="etape2 fade-in fade-delay-2">
-                        <i class="bi bi-search"></i><span class="etape numero">Etape:02</span>
+                    <div class="bento-item etape2 fade-in fade-delay-2">
+                        <i class="bi bi-search"></i><span class="etape-numero">Etape:02</span>
                         <h3>Trouvez le match</h3>
                         <p>Notre algorithme connecte les talents avec les missions les plus pertinentes en un clic.</p>
                     </div>
-                    <div class="etape3 fade-in fade-delay-3">
-                        <i class="bi bi-chat-fill"></i><span class="etape numero">Etape:03</span>
+                    <div class="bento-item etape3 fade-in fade-delay-3">
+                        <i class="bi bi-chat-fill"></i><span class="etape-numero">Etape:03</span>
                         <h3>Collaborez</h3>
                         <p>Échangez en toute sécurité via notre interface dédiée et lancez vos projets sans attendre.</p>
                     </div>
-                    <div class="etape4 fade-in fade-delay-4">
-                        <i class="bi bi-check-circle-fill"></i><span class="etape numero">Etape:04</span>
+                    <div class="bento-item etape4 fade-in fade-delay-4">
+                        <i class="bi bi-check-circle-fill"></i><span class="etape-numero">Etape:04</span>
                         <h3>Réussissez</h3>
                         <p>Finalisez vos missions et profitez d'un système de paiement sécurisé et garanti.</p>
                     </div>
                 </div>
             </div>
+        <!-- =================================SECTION: CATÉGORIES DE SERVICES ================================================ -->
 
         </section>
         <section id="services" class="services-section">
@@ -159,6 +164,7 @@
             </div>
 
         </section>
+        <!-- ============================================ SECTION: TÉMOIGNAGES ================================================= -->
         <section id="testimonials" class="testimonials-section fade-in">
             <div class="container">
                 <header>
@@ -228,6 +234,7 @@
                 </div>
             </div>
         </section>
+        <!-- =====================================SECTION:  APPEL À L'ACTION (CTA) =============================================-->
 
         <section id="cta" class="cta-section fade-in">
             <div class="container text-center">
@@ -241,6 +248,7 @@
                 </div>
             </div>
         </section>
+        <!--SECTION: FOOTER-->
 
         <footer class="footer-section">
             <div class="container">
@@ -260,18 +268,18 @@
                         <h4>Liens utiles</h4>
                         <ul class="footer-links">
                             <li><a href="#">Accueil</a></li>
-                            <li><a href="#Function">Comment ça marche</a></li>
-                            <li><a href="#Services">services</a></li>
-                            <li><a href="#temoignages">Témoignages</a></li>
+                            <li><a href="#function">Comment ça marche</a></li>
+                            <li><a href="#services">services</a></li>
+                            <li><a href="#testimonials">Témoignages</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <h4>Ressources</h4>
                         <ul class="footer-links">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Guide Freelance</a></li>
-                            <li><a href="#">Centre d'aide</a></li>
-                            <li><a href="#">Confidentialité</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="guide.html">Guide Freelance</a></li>
+                            <li><a href="aide.html">Centre d'aide</a></li>
+                            <li><a href="confidentialite.html">Confidentialité</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">

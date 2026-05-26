@@ -3,40 +3,40 @@
    AFRITALENT — Dark Mode • Navbar Scroll • Back To Top
 ===================================================================================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { /* dans tout mon document (tout mon html), ecoute le et quand la page est completement charge, execute tout ce qui est a l'interieur de mon bloc js */
 
     /* ======================================================================
        1. DARK MODE + LOCAL STORAGE
        ====================================================================== */
 
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeLabel = document.querySelector(".form-check-label");
+    const themeToggle = document.getElementById("theme-toggle"); /* dans mon document recupere l'element qui a l'Id: "theme-toggle" et stocke le dans ma variable creer nommee: "themeToggle" */
+    const themeLabel = document.querySelector(".form-check-label"); /* querySelector permet de recuperer la premiere valeur de la classe ".form-check-label" */ 
 
-    /* Charger le thème sauvegardé */
-    const savedTheme = localStorage.getItem("theme");
+    /* Charger le thème sauvegarder dans mon navigateur par exemple si mon navigateur etait en mode sombre directement si j'ouvre ma page il sera en mode sombre */
+    const savedTheme = localStorage.getItem("theme"); /* recupere la valeur stocke dans "theme" */
 
-    if (savedTheme === "dark") {
+    if (savedTheme === "dark") { /* si le theme sauvegarder est "dark" alors */
 
-        document.body.classList.add("dark-mode");
+        document.body.classList.add("dark-mode"); /* ajoute le et le css va se charger de comment il va s'afficher une fois active */
 
-        if (themeToggle) {
-            themeToggle.checked = true;
+        if (themeToggle) { /* si il y'a themeToggle exixte */
+            themeToggle.checked = true; /* alors coche le */
         }
 
-        if (themeLabel) {
-            themeLabel.textContent = "☀️";
+        if (themeLabel) { /* si themeLabel exixte */
+            themeLabel.textContent = "☀️"; /* alors affiche le comme ca : "☀️" */
         }
 
-    } else {
+    } else { /*sinon */
 
-        document.body.classList.remove("dark-mode");
+        document.body.classList.remove("dark-mode"); /*supprime le */
 
         if (themeLabel) {
-            themeLabel.textContent = "🌙";
+            themeLabel.textContent = "🌙"; /* affiche le comme ca : "🌙" */
         }
     }
 
-    /* Changement du thème */
+    /* Changement du thème ici c'est on decide de changer le theme par exemple dans une 1ere fois quand j'ai ouvert j'etait en mode sombre et maintenant je veux le changer  */
     if (themeToggle) {
 
         themeToggle.addEventListener("change", () => {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 /* MODE SOMBRE ACTIVÉ */
                 document.body.classList.add("dark-mode");
 
-                localStorage.setItem("theme", "dark");
+                localStorage.setItem("theme", "dark"); /* stocke la valeur dark dans "theme" */
 
                 if (themeLabel) {
                     themeLabel.textContent = "☀️";
@@ -93,17 +93,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const backToTop = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => { /* surveille si il va defiler vers le haut ou vers le bas */
 
-        if (backToTop) {
+        if (backToTop) { /* verification de son existance */
 
-            if (window.scrollY > 300) {
+            if (window.scrollY > 300) { /* si le defilement vers le bas est de plus de 300 px */
 
-                backToTop.classList.add("show");
+                backToTop.classList.add("show"); /* alors afficher le bouton(retour en haut) */
 
             } else {
 
-                backToTop.classList.remove("show");
+                backToTop.classList.remove("show"); /* afficher pas */
             }
         }
     });
@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Scroll fluide */
     if (backToTop) {
 
-        backToTop.addEventListener("click", () => {
+        backToTop.addEventListener("click", () => { /* ici ecoute si on va le cliquer ou pas */
 
-            window.scrollTo({
+            window.scrollTo({ /* renvoit l'utilisateur tout en haut ("top:0") */
                 top: 0,
-                behavior: "smooth"
+                behavior: "smooth" /* remonter de manniere fluide */
             });
         });
     }
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }, {
-        threshold: 0.2
+        threshold: 0
     });
 
     fadeElements.forEach(element => {
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     /* ======================================================================
-    COMMIT8: 6. FILTRAGE DES FREELANCES (SANS RECHARGEMENT)
+    COMMIT8: 6. FILTRAGE DES FREELANCES
     ====================================================================== */
     const filterButtons = document.querySelectorAll(".btn-filtre");
     const freelanceCards = document.querySelectorAll(".carte-freelance");

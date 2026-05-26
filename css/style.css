@@ -2,9 +2,9 @@
    1. IMPORTATIONS & VARIABLES GLOBAL (Google Fonts & :root)
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap');
-
-:root {
-    /* Palette de couleurs (Cohérente & orientée Tech/Sécurité) */
+/* importer des polices depuis google Fonts */
+:root {      /* stockage des valeurs */
+    /* Palette de couleurs (Cohérente) */
     --color-primary: #2563eb;       /* Bleu Tech principal */
     --color-primary-dark: #1d4ed8;  /* Bleu foncé pour les survols (hover) */
     --color-secondary: #0f172a;    /* Bleu nuit / Noir pour les titres et le mode sombre */
@@ -12,11 +12,11 @@
     --color-bg-light: #f8fafc;     /* Fond de page ultra-clair */
     --color-muted: #64748b;        /* Gris pour les textes secondaires / descriptions */
 
-    /* Typographies (Exigence des 2 Google Fonts) */
-    --font-titles: 'Syne', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* Exigence des 2 Google Fonts */
+    --font-titles: 'Syne', sans-serif; /* syne est reconnu par css grace a mon @import de meme que inter */
+    --font-body: 'Inter', sans-serif; /* inter= police de texte / syne= police de titres */
 
-    /* Espacements standardisés */
+    /* mes variables pour les espaces */
     --space-xs: 0.5rem;   /* 8px */
     --space-sm: 1rem;     /* 16px */
     --space-md: 2rem;     /* 32px */
@@ -25,10 +25,8 @@
     /* Transitions fluides pour les boutons et liens */
     --transition-smooth: all 0.3s ease;
 }
-/* ==========================================================================
-   2. RESET CSS & STYLES DE BASE
-   ========================================================================== */
-*, *::before, *::after {
+/* Remettre les marges a 0 */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -38,8 +36,9 @@ body {
     font-family: var(--font-body);
     background-color: var(--color-bg-light);
     color: var(--color-secondary);
-    line-height: 1.6;
-    overflow-x: hidden;   
+    line-height: 1.6; /*interligne*/
+    overflow-x: hidden;   /* je cache tout ce qui se depasse horizontalement */
+    padding-top: 80px; /* ajoute une marge en haut de 80px pour eviter que mes sections passent sous le navbar*/ 
 }
 img {
         max-width: 100%;
@@ -51,11 +50,11 @@ img {
     section {
         padding: var(--space-lg) 0;
     }
-/* Application de la police des titres globalement */
-h1, h2, h3, h4, h5, h6, .display-4, .navbar-brand {
+/* Application de la police, couleur et de l'epaisseur sur mes titres, mon logo,   */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-family: var(--font-titles);
     color: var(--color-secondary);
-    font-weight: 700;
+    font-weight: 700; /* gras */
 }
 
 a {
@@ -67,8 +66,8 @@ a {
    3. LAYOUT GÉNÉRAL : NAVBAR STYLISÉE
    ========================================================================== */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px); /* Petit effet de flou moderne derrière la barre */
+    background-color: rgba(255, 255, 255, 0.95) !important; /* !important: pour le forcer a used ma couleur */
+   /* backdrop-filter: blur(10px); /* Petit effet de flou moderne derrière la barre */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: var(--space-sm) 0;
 }
@@ -123,8 +122,8 @@ a {
    HERO SECTION
    ========================================================================== */
 .hero-section {
-    padding-top: 9rem; /* Un peu d'espace pour ne pas coller à la navbar fixe */
-    padding-bottom: 4rem;
+    /*padding-top: 9rem; /* Un peu d'espace pour ne pas coller à la navbar fixe */
+    /*padding-bottom: 4rem; */
     background: linear-gradient(
         135deg,
         #f8fafc 0%,
@@ -272,7 +271,7 @@ a {
 }
 
 .etape4 {
-    grid-column: span 2;
+    grid-column: span 2; /* prend la largeur de deux colonne */
 }
 
 .bento-item i {
@@ -288,7 +287,7 @@ a {
     margin-bottom: var(--space-xs);
 }
 
-/* Correction de la classe pour correspondre au HTML (<span class="etape-numero">) */
+
 .etape-numero {
     position: absolute;
     top: var(--space-md);
@@ -327,11 +326,11 @@ a {
     width: 70px;
     height: 70px;
     margin: 0 auto var(--space-sm) auto;
-    border-radius: 50%;
+    border-radius: 50%;  /* arrondir les coins (50%= cercle) */
     background: rgba(37,99,235,0.08);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;  /* centre verticalement */
     transition: var(--transition-smooth);
 }
 
@@ -372,7 +371,7 @@ a {
 .testimonial-card {
     max-width: 700px;
     margin: 0 auto var(--space-lg) auto;
-    background-color: #f8fafc; /* Remplacé par une couleur web standard si ta variable n'est pas encore lue */
+    background-color: #f8fafc; 
     padding: var(--space-lg);
     border-radius: 24px;
     text-align: center;
@@ -596,7 +595,7 @@ footer a:hover {
 /* ==========================================================================
    PETITS MOBILES — 375px
    ========================================================================== */
-@media (max-width: 375px) {
+@media (max-width: 375px) { /* applique ses regles seulement si l'ecran fait moins de 375px */
 
     .hero-content h1 {
         font-size: 2.2rem;
@@ -606,7 +605,7 @@ footer a:hover {
         font-size: 0.95rem;
     }
 
-    /* Correction : Ajout de tes classes personnalisées du Hero pour le 100% */
+    
     .btn,
     .btn-primary,
     .btn-outline-primary,
@@ -656,14 +655,14 @@ footer,
    NAVBAR DYNAMIQUE AU SCROLL
    ========================================================================== */
 .navbar {
-    backdrop-filter: blur(14px);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 .navbar-scrolled {
     padding: 0.45rem 0 !important;
     background-color: rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(50px); /* pour rendre flou le fond de mon navbar de se fait au moment du scroll on ne voit pas le contenue defiler derriere */
 }
 
 /* ==========================================================================
@@ -672,7 +671,7 @@ footer,
 .section-filtres .barre-filtre {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* si y'a plus d'espace alors ligne suivante */
     margin-top: var(--space-md);
 }
 
@@ -690,7 +689,7 @@ footer,
     border: 1px solid #e2e8f0;
     border-radius: 30px;
 
-    cursor: pointer;
+    cursor: pointer; /* permettant lorsque le curseur passe sur l'element, il devient une main cliquable */
     transition: var(--transition-smooth);
 }
 
@@ -739,17 +738,17 @@ footer,
     margin-right: 8px;
 }
 
-.bento-grid .etape.numero {
+.bento-grid .etape-numero {
     font-size: 0.85rem;
     font-weight: 700;
 
     color: var(--color-primary);
 
-    text-transform: uppercase;
+    text-transform: uppercase; /* TOUT EN MAJUSCULE */ 
     letter-spacing: 0.5px;
 }
 
-.bento-grid > div[class^="etape"] h3 {
+.bento-grid > div[class^="etape"] h3 { /* je vise  tous les h3 qui sont a l'interieur des div  enfants directs de bento-grid et dont leurs noms commencent par: etape */
     font-size: 1.3rem;
     font-weight: 700;
 
@@ -800,7 +799,7 @@ footer,
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: cover; /* mettre l'image dans son contenu sans le deformer */
 
     transition: transform 0.4s ease;
 }
@@ -815,7 +814,7 @@ footer,
     top: 15px;
     left: 15px;
 
-    z-index: 2;
+    z-index: 2; /* pour mettre le prix en haut */
 
     padding: 0.4rem 0.9rem;
 
@@ -1060,7 +1059,7 @@ footer,
 
 /* DETAILS */
 .tarif-detail {
-    flex-grow: 1;
+    flex-grow: 1; /* s'etire pour occuper la place libre */
 
     margin-bottom: var(--space-md);
 }
@@ -1378,7 +1377,7 @@ body.dark-mode .accordion-body {
     opacity: 0;
     visibility: hidden;
 
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 #backToTop.show {
@@ -1493,7 +1492,7 @@ body.dark-mode .btn-choisir-principal {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
-}
+}    
 /* Delais d'animation */
     
     .fade-delay-1 {

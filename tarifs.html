@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarifs et Plans - AfriTalent</title>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-
+    <!-- ===================================== NAVBAR/HEARDER ====================================================== -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                       <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                       <li class="nav-item"><a class="nav-link"  href="freelances.html">Freelances</a></li>
-                       <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifs.html">Tarifs</a></li>
-                       <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-                       <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                href="tarifs.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
 
                     </ul>
                     <div class="form-check form-switch ms-3">
@@ -41,6 +45,7 @@
 
         </nav>
     </header>
+    <!--SECTION: 3 plans tarifaires-->
 
     <section class="section-tarifs py-5">
         <div class="container">
@@ -65,7 +70,7 @@
                             <button class="btn-choisir">Choisir ce plan</button>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 fade-in fade-delay-2">
                     <div class="carte-tarif-plus-visible">
@@ -86,7 +91,7 @@
                             <button class="btn-choisir-principal">Choisir ce plan</button>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4 fade-in fade-delay-3">
@@ -108,21 +113,22 @@
                             <button class="btn-choisir">Choisir ce plan</button>
                         </div>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
         </div>
     </section>
+    <!-- ================================= SECTION: MODE DE PAIEMENT ================================================ -->
 
     <section class="container-fluid py-4 bg-light border-top border-bottom fade-in">
         <div class="container text-center">
-        
+
             <p class="mb-3 fw-bold text-success">
                 <i class="bi bi-shield-lock-fill"></i> Paiements 100% sécurisés
             </p>
 
-       
+
             <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
                 <span class="badge bg-white text-dark border p-2 shadow-sm">
                     <i class="bi bi-phone-fill text-warning"></i> Orange Money
@@ -138,8 +144,10 @@
                 <span class="badge bg-white text-dark border p-2 shadow-sm">
                     <i class="bi bi-paypal text-primary"></i> Paypal</span>
             </div>
-    </div>
-</section>
+        </div>
+    </section>
+    <!-- ==================================== SECTION: FAQ en accordion Bootstrap ============================================ -->
+
 
     <section class="section-faq py-5 bg-light fade-in">
         <div class="container">
@@ -149,60 +157,75 @@
                     <div class="accordion" id="faq-tarif">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#reponse1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#reponse1">
                                     Puis-je changer de forfait à tout moment ?
                                 </button>
                             </h3>
                             <div id="reponse1" class="accordion-collapse collapse show" data-bs-parent="#faq-tarif">
                                 <div class="accordion-body">
-                                    Oui, vous pouvez augmenter ou réduire votre abonnement à tout moment depuis votre espace client.
+                                    Oui, vous pouvez augmenter ou réduire votre abonnement à tout moment depuis votre
+                                    espace client.
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#reponse2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#reponse2">
                                     Vos paiements sont-ils sécurisés ?
                                 </button>
                             </h3>
                             <div id="reponse2" class="accordion-collapse collapse" data-bs-parent="#faq-tarif">
                                 <div class="accordion-body">
-                                    Absolument. Nous utilisons un cryptage SSL de bout en bout pour garantir la sécurité de vos transactions.
+                                    Absolument. Nous utilisons un cryptage SSL de bout en bout pour garantir la sécurité
+                                    de vos transactions.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#reponse3">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#reponse3">
                                     Quels sont les modes de paiement acceptés ?
                                 </button>
                             </h3>
                             <div id="reponse3" class="accordion-collapse collapse" data-bs-parent="#faq-tarif">
                                 <div class="accordion-body">
-                                     Nous acceptons les cartes bancaires (Visa, MasterCard), ainsi que les paiements via PayPal. Pour les forfaits "Entreprise", nous acceptons également les virements bancaires.
+                                    Nous acceptons les cartes bancaires (Visa, MasterCard), ainsi que les paiements via
+                                    PayPal. Pour les forfaits "Entreprise", nous acceptons également les virements
+                                    bancaires.
                                 </div>
                             </div>
-                        </div><div class="accordion-item">
+                        </div>
+                        <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#reponse4">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#reponse4">
                                     Proposez-vous une période d'essai gratuite ?
                                 </button>
                             </h3>
                             <div id="reponse4" class="accordion-collapse collapse" data-bs-parent="#faq-tarif">
                                 <div class="accordion-body">
-                                    Le forfait "Essentiel" est gratuit à vie et vous permet de tester nos services de base. Pour les forfaits payants, vous bénéficiez d'une garantie "satisfait ou remboursé" de 14 jours.
+                                    Le forfait "Essentiel" est gratuit à vie et vous permet de tester nos services de
+                                    base. Pour les forfaits payants, vous bénéficiez d'une garantie "satisfait ou
+                                    remboursé" de 14 jours.
                                 </div>
                             </div>
-                        </div><div class="accordion-item">
+                        </div>
+                        <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#reponse5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#reponse5">
                                     Vos forfaits sont-ils avec ou sans engagement ?
                                 </button>
                             </h3>
                             <div id="reponse5" class="accordion-collapse collapse" data-bs-parent="#faq-tarif">
                                 <div class="accordion-body">
-                                    Tous nos abonnements sont sans engagement de durée. Vous pouvez résilier votre forfait à tout moment directement depuis vos paramètres, sans frais cachés ni préavis.
+                                    Tous nos abonnements sont sans engagement de durée. Vous pouvez résilier votre
+                                    forfait à tout moment directement depuis vos paramètres, sans frais cachés ni
+                                    préavis.
                                 </div>
                             </div>
                         </div>
@@ -216,9 +239,12 @@
 
     <button id="backToTop">↑</button>
 
-     
+
 
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

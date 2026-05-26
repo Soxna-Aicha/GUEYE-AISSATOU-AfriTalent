@@ -10,11 +10,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <!-- ================================== NAVBAR/HEARDER ========================================================= -->
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+                <a class="navbar-brand" href="index.html">AfriTalent</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,12 +37,13 @@
         </nav>
     </header>
 
-    <main class="container mt-5 pt-5">
+    <main class="container">
         
         <section class="text-center py-5">
             <h1 class="display-4 fw-bold">Le Blog d'AfriTalent</h1>
             <p class="lead text-muted">Découvrez nos conseils, astuces et actualités sur le freelancing et la tech en Afrique.</p>
         </section>
+        <!-- ============================== SECTION: LES DIFFERENTES CATEGORIES ========================================= -->
         <section class="categories mb-5 fade-in">
             <div class="d-flex flex-wrap justify-content-center gap-2">
                 <button type="button" class="btn btn-primary rounded-pill px-4">Tous</button>
@@ -51,12 +53,14 @@
                 <button type="button" class="btn btn-outline-secondary rounded-pill px-4">Cybersécurité & Réseaux</button>
             </div>
         </section>
+        <!-- =================================== SECTION: CATEGORIES DETAILLES ============================================== -->
         <section class="articles mb-5 fade-in">
             <div class="row g-4">
+                <!--Développement Web-->
         
-                <div class="col-md-4 fade-in fade-delay-1">
+                <div class="col-12 col-md-4 fade-in fade-delay-1">
                     <div class="card h-100 border-0 shadow-sm">
-                        <img src="images/blog-tech.jpg" class="card-img-top" alt="Code sur un écran">
+                        <img src="images/blog-tech.jpg" class="card-img-top" alt="Code-sur-un-écran">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Développement Web</span>
                             <h5 class="card-title fw-bold">Les frameworks JS les plus demandés en 2026</h5>
@@ -71,9 +75,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in fade-delay-2">
+                <!--Design & Créa-->
+                <div class="col-12 col-md-4 fade-in fade-delay-2">
                     <div class="card h-100 border-0 shadow-sm">
-                        <img src="images/blog-design - Copie.jpg" class="card-img-top" alt="Maquettes de design sur tablette">
+                        <img src="images/blog-design.jpg" class="card-img-top" alt="Maquettes-de-design-sur-tablette">
                         <div class="card-body">
                             <span class="badge bg-warning text-dark mb-2">Design & Créa</span>
                             <h5 class="card-title fw-bold">UI/UX : Penser le design pour les connexions mobiles lentes</h5>
@@ -88,9 +93,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in fade-delay-3">
+                <!--Marketing Digital-->
+                <div class="col-12 col-md-4 fade-in fade-delay-3">
                     <div class="card h-100 border-0 shadow-sm">
-                        <img src="images/blog-marketing - Copie.jpg" class="card-img-top" alt="Stratégie marketing">
+                        <img src="images/blog-marketing.jpg" class="card-img-top" alt="Stratégie-marketing">
                         <div class="card-body">
                             <span class="badge bg-success mb-2">Marketing Digital</span>
                             <h5 class="card-title fw-bold">Comment trouver ses premiers clients internationaux</h5>
@@ -105,10 +111,11 @@
                         </div>
                     </div>
                 </div>
+                <!--Cybersécurité & Réseaux-->
 
-                <div class="col-md-4 fade-in fade-delay-4">
+                <div class="col-12 col-md-4 fade-in fade-delay-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <img src="images/blog-cyber.jpg" class="card-img-top" alt="Sécurité informatique informatique">
+                        <img src="images/blog-cyber.jpg" class="card-img-top" alt="Sécurité-informatique-informatique">
                         <div class="card-body">
                             <span class="badge bg-danger mb-2">Cybersécurité & Réseaux</span>
                             <h5 class="card-title fw-bold">Freelances : 5 réflexes pour sécuriser vos projets clients</h5>
@@ -125,6 +132,7 @@
                 </div>
             </div>
         </section>
+        <!-- =============================== SECTION: NAVIGATION DES PAGES =================================================== -->
         <nav aria-label="Navigation des articles du blog" class="py-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
